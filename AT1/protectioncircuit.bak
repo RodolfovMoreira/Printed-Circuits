@@ -1,0 +1,233 @@
+EESchema Schematic File Version 4
+LIBS:protectioncircuit-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 5DBDB06E
+P 4000 4000
+F 0 "#PWR?" H 4000 3850 50  0001 C CNN
+F 1 "+12V" H 4015 4173 50  0000 C CNN
+F 2 "" H 4000 4000 50  0001 C CNN
+F 3 "" H 4000 4000 50  0001 C CNN
+	1    4000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5DBDBD98
+P 4000 4350
+F 0 "#PWR?" H 4000 4100 50  0001 C CNN
+F 1 "Earth" H 4000 4200 50  0001 C CNN
+F 2 "" H 4000 4350 50  0001 C CNN
+F 3 "~" H 4000 4350 50  0001 C CNN
+	1    4000 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4000 4000 4250
+Connection ~ 4000 4250
+Wire Wire Line
+	4000 4250 4000 4350
+$Comp
+L Device:Polyfuse F1
+U 1 1 5DBDECF1
+P 4000 3450
+F 0 "F1" H 4088 3496 50  0000 L CNN
+F 1 "500mA" H 4088 3405 50  0000 L CNN
+F 2 "" H 4050 3250 50  0001 L CNN
+F 3 "~" H 4000 3450 50  0001 C CNN
+	1    4000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3900 4000 3600
+$Comp
+L Device:C_Small C1
+U 1 1 5DD12310
+P 5000 3450
+F 0 "C1" H 5092 3496 50  0000 L CNN
+F 1 "100nF" H 5092 3405 50  0000 L CNN
+F 2 "" H 5000 3450 50  0001 C CNN
+F 3 "~" H 5000 3450 50  0001 C CNN
+	1    5000 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5DD13D2C
+P 5750 3450
+F 0 "C2" H 5842 3496 50  0000 L CNN
+F 1 "100nF" H 5842 3405 50  0000 L CNN
+F 2 "" H 5750 3450 50  0001 C CNN
+F 3 "~" H 5750 3450 50  0001 C CNN
+	1    5750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5DD14048
+P 6400 3450
+F 0 "C3" H 6492 3496 50  0000 L CNN
+F 1 "100nF" H 6492 3405 50  0000 L CNN
+F 2 "" H 6400 3450 50  0001 C CNN
+F 3 "~" H 6400 3450 50  0001 C CNN
+	1    6400 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:KA78M05_TO252 U1
+U 1 1 5DD1535D
+P 5750 2700
+F 0 "U1" H 5750 2942 50  0000 C CNN
+F 1 "MC7805BDTRKG" H 5750 2851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 5750 2925 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78M05.pdf" H 5750 2650 50  0001 C CNN
+	1    5750 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3000 5750 3350
+Wire Wire Line
+	4000 3300 4000 2700
+Wire Wire Line
+	4000 2700 5000 2700
+Wire Wire Line
+	5000 3350 5000 2700
+Connection ~ 5000 2700
+Wire Wire Line
+	5000 2700 5450 2700
+Wire Wire Line
+	5000 3550 5000 4250
+Wire Wire Line
+	5000 4250 4000 4250
+Wire Wire Line
+	6400 3350 6400 2700
+Wire Wire Line
+	6400 2700 6050 2700
+Wire Wire Line
+	5750 3550 5750 4250
+Wire Wire Line
+	5750 4250 5000 4250
+Connection ~ 5000 4250
+Wire Wire Line
+	6400 3550 6400 4250
+Wire Wire Line
+	6400 4250 5750 4250
+Connection ~ 5750 4250
+$Comp
+L Device:R_Small_US R1
+U 1 1 5DD176C9
+P 7400 2950
+F 0 "R1" H 7468 2996 50  0000 L CNN
+F 1 "2.2K" H 7468 2905 50  0000 L CNN
+F 2 "" H 7400 2950 50  0001 C CNN
+F 3 "~" H 7400 2950 50  0001 C CNN
+	1    7400 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 5DD18BF8
+P 7400 3550
+F 0 "R2" H 7468 3596 50  0000 L CNN
+F 1 "2.2K" H 7468 3505 50  0000 L CNN
+F 2 "" H 7400 3550 50  0001 C CNN
+F 3 "~" H 7400 3550 50  0001 C CNN
+	1    7400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R3
+U 1 1 5DD191B8
+P 7400 3900
+F 0 "R3" H 7468 3946 50  0000 L CNN
+F 1 "0.1K" H 7468 3855 50  0000 L CNN
+F 2 "" H 7400 3900 50  0001 C CNN
+F 3 "~" H 7400 3900 50  0001 C CNN
+	1    7400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2700 7400 2700
+Wire Wire Line
+	7400 2700 7400 2850
+Connection ~ 6400 2700
+Wire Wire Line
+	7400 3050 7400 3300
+Wire Wire Line
+	7400 3650 7400 3800
+Wire Wire Line
+	7400 4000 7400 4250
+Wire Wire Line
+	7400 4250 6400 4250
+Connection ~ 6400 4250
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DD1A407
+P 8000 3300
+F 0 "#PWR?" H 8000 3150 50  0001 C CNN
+F 1 "+3.3V" V 8071 3473 50  0000 C CNN
+F 2 "" H 8000 3300 50  0001 C CNN
+F 3 "" H 8000 3300 50  0001 C CNN
+	1    8000 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7400 2700 7600 2700
+Connection ~ 7400 2700
+Wire Wire Line
+	8000 3300 7400 3300
+Connection ~ 7400 3300
+Wire Wire Line
+	7400 3300 7400 3450
+Text Notes 750  7400 0    50   Italic 0
+Cálculo do Divisor de tensão:\n\nV out = 5*4.4k / (2.2k + 4.4k) = 3.33V
+$Comp
+L Device:Polyfuse F2
+U 1 1 5DD2517F
+P 7750 2700
+F 0 "F2" V 7838 2746 50  0000 L CNN
+F 1 "350mA" V 7638 2520 50  0000 L CNN
+F 2 "" H 7800 2500 50  0001 L CNN
+F 3 "~" H 7750 2700 50  0001 C CNN
+	1    7750 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7900 2700 7950 2700
+$Comp
+L Device:Polyfuse F3
+U 1 1 5DD27055
+P 7750 3300
+F 0 "F3" V 7838 3346 50  0000 L CNN
+F 1 "100mA" V 7638 3120 50  0000 L CNN
+F 2 "" H 7800 3100 50  0001 L CNN
+F 3 "~" H 7750 3300 50  0001 C CNN
+	1    7750 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DD276D9
+P 7950 2700
+F 0 "#PWR?" H 7950 2550 50  0001 C CNN
+F 1 "+5V" V 7965 2828 50  0000 L CNN
+F 2 "" H 7950 2700 50  0001 C CNN
+F 3 "" H 7950 2700 50  0001 C CNN
+	1    7950 2700
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
